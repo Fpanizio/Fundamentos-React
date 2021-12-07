@@ -10,6 +10,10 @@ import Familia from "./components/basicos/Familia";
 import FamiliaMembro from "./components/basicos/FamiliaMembro";
 import ListaAlunos from "./components/repeticao/ListaAlunos";
 import TabelaProdutos from "./components/repeticao/TabelaProdutos";
+import ParOuImpar from "./condicional/ParOuImpar";
+import UsuarioInfo from "./condicional/UsuarioInfo";
+import DiretaPai from "./comunicacao/DiretaPai";
+import IndiretaPai from "./comunicacao/IndiretaPai";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default (props) => {
@@ -17,6 +21,19 @@ export default (props) => {
     <div className="App">
       <h1>Fundamentos React</h1>
       <div className="Cards">
+        <Card titulo="#09 - Comunicação Indireta" color="#8bad39">
+          <IndiretaPai />
+        </Card>
+
+        <Card titulo="#09 - Comunicação direta" color="#59323c">
+          <DiretaPai />
+        </Card>
+
+        <Card titulo="#08 - Par ou Impar" color="#982395">
+          <ParOuImpar numero={21}/>
+          <UsuarioInfo usuario={{nome: 'Felipe'}}/>
+        </Card>
+
         <Card titulo="#07 - Desafio repetição" color="#FF432E">
           <TabelaProdutos />
         </Card>
